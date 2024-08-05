@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for Social Media Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Theme Toggle Styles */
+        .theme-toggle {
+            width: 50px;
+            height: 25px;
+            background-color: #4B5563;
+            border-radius: 25px;
+            position: relative;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 5px;
+        }
+
+        .theme-toggle .toggle-thumb {
+            width: 20px;
+            height: 20px;
+            background-color: white;
+            border-radius: 50%;
+            position: absolute;
+            transition: all 0.3s ease;
+        }
+
+        .theme-toggle.light-mode {
+            background-color: #FBBF24;
+        }
+
+        .theme-toggle.light-mode .toggle-thumb {
+            transform: translateX(25px);
+        }
+
+        .theme-toggle .toggle-icon {
+            display: none;
+        }
+
+        .theme-toggle.light-mode .toggle-icon.moon {
+            display: block;
+            color: #374151;
+        }
+
+        .theme-toggle.light-mode .toggle-icon.sun {
+            display: none;
+        }
+
+        .theme-toggle .toggle-icon.moon {
+            color: #FBBF24;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white font-sans">
+    <!-- Navbar -->
+    <nav class="flex items-center justify-between p-6">
+        <!-- Profile and Name -->
+        <div class="flex flex-col items-center">
+            <img src="profileImage.jpeg" alt="Profile Image" class="rounded-full w-24 h-24 object-cover mb-2">
+            <h1 class="text-2xl font-bold">Musharaf Ali</h1>
+        </div>
+        <!-- Navigation Links -->
+        <div class="flex space-x-8 items-center">
+            <a href="#about" class="text-lg hover:text-gray-400">About</a>
+            <a href="#projects" class="text-lg hover:text-gray-400">Projects</a>
+            <a href="#contact" class="text-lg hover:text-gray-400">Contact</a>
+            <a href="#certificates" class="text-lg hover:text-gray-400">Certificates</a>
+            <a href="#achievements" class="text-lg hover:text-gray-400">Achievements</a>
+            <a href="https://drive.google.com/file/d/1S6zLw7wZgcWSCYMnDj9gmeTacXJ1fXTF/view?usp=drivesdk" target="_blank" class="text-lg hover:text-gray-400">Resume</a>
+            <!-- Theme Toggle Button -->
+            <div id="theme-toggle" class="theme-toggle">
+                <i class="fas fa-moon toggle-icon moon"></i>
+                <div class="toggle-thumb"></div>
+                <i class="fas fa-sun toggle-icon sun"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mx-auto p-8">
+        <!-- About Section -->
+        <section id="about" class="mb-12">
+            <h2 class="text-3xl font-semibold mb-4">About Me</h2>
+            <p class="text-lg leading-relaxed">
+                I am a passionate software engineer with strong expertise in Android development, cybersecurity, and a deep understanding of data structures and algorithms. I enjoy creating efficient and secure applications, solving complex problems, and continuously learning new technologies.
+            </p>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="mb-12">
+            <h2 class="text-3xl font-semibold mb-4">Skills</h2>
+            <ul class="list-disc list-inside space-y-2">
+                <li>Android Development</li>
+                <li>Cybersecurity</li>
+                <li>Data Structures & Algorithms</li>
+                <li>Java, Kotlin, Python, JavaScript</li>
+                <li>Version Control (Git)</li>
+                <li>Problem Solving & Debugging</li>
+            </ul>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="mb-12">
+            <h2 class="text-3xl font-semibold mb-4">Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Project 1 -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-semibold mb-2">Calendar Event</h3>
+                    <p class="text-lg leading-relaxed">
+                        Project is purely made on Java program that creates an event calendar where users can create and view events for a specific date and time. The program uses the command-line interface (CLI) for input and output.
+                    </p>
+                </div>
+                <!-- Project 2 -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-semibold mb-2">Course List App</h3>
+                    <p class="text-lg leading-relaxed">
+                        The Course App, developed using Kotlin programming, offers a dynamic platform with a user- friendly interface for accessing educational courses. Leveraging Kotlin's versatility, the app seamlessly integrates various functionalities to enhance the user experience.
+                    </p>
+                </div>
+                <!-- Add more projects as needed -->
+            </div>
+        </section>
+
+        <!-- Certificates Section -->
+        <section id="certificates" class="mb-12">
+            <h2 class="text-3xl font-semibold mb-4">Certificates</h2>
+
+            <div class="mb-4">
+                <h3 class="text-xl font-semibold">GeeksforGeeks</h3>
+                <p class="text-gray-400">Completed the DSA self-paced course from GeeksforGeeks, where I learned various data structures and algorithms, solved programming problems, participated in coding contests, and developed projects like a Sudoku solver and Tic Tac Toe game, gaining strong problem-solving skills..</p>
+                <a href="https://media.geeksforgeeks.org/courses/certificates/984d45221ca4cb4fcd5e341465aa329a.pdf" class="text-blue-500 hover:underline">View Certificate</a>
+            </div>
+
+            <div class="mb-4">
+                <h3 class="text-xl font-semibold">CompTIA Linux+</h3>
+                <p class="text-gray-400">Completed the CompTIA Linux+ XK0-005 course, where I gained a solid understanding of system administration fundamentals, cybersecurity principles, various attack types, and proficiency in Linux commands..</p>
+                <a href="https://app.cybrary.it/courses/api/certificate/CC-8d7453d6-9c83-4b38-a1ae-9fa39d4a7505/view" class="text-blue-500 hover:underline">View Certificate</a>
+            </div>
+        </section>
+
+        <!-- Achievements Section -->
+        <section id="achievements" class="mb-12">
+            <h2 class="text-3xl font-semibold mb-4">Achievements</h2>
+            <ul class="list-disc list-inside space-y-2 text-lg leading-relaxed">
+                <li>Secured 975th rank on GFG by solving 300+ programming problems, 4-star rating in DSA on Hackerrank.</li>
+                <li>One among "S-1" top 11-50% students at university.</li>
+                <li>Completed 30 Days of Coding Challenges on a leetcode, successfully building multiple projects that enhanced my proficiency in android development.</li>
+            </ul>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="text-center mb-12">
+            <h2 class="text-3xl font-semibold mb-4">Contact Me</h2>
+            <p class="text-lg leading-relaxed mb-4">
+                Feel free to reach out for collaborations or just a friendly chat.
+            </p>
+            <div class="flex justify-center space-x-8 mb-4">
+                <a href="mailto:alimusharaf725@gmail.com" class="text-blue-500 hover:text-blue-400 text-lg font-semibold flex items-center">
+                    <i class="fas fa-envelope mr-2"></i> alimusharaf725@gmail.com
+                </a>
+            </div>
+            <div class="flex justify-center space-x-8 mb-4">
+                <div class="text-lg font-semibold flex items-center">
+                    <i class="fas fa-phone mr-2"></i> +91 7301943735 
+                </div>
+            </div>
+            <div class="flex justify-center space-x-8 mb-4">
+                <div class="text-lg font-semibold flex items-center">
+                    <i class="fas fa-map-marker-alt mr-2"></i> Bettiah West Champaran (845438), Bettiah, Bihar
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-800 text-center p-4 mt-12">
+        <div class="flex justify-center space-x-6 mb-4">
+            <a href="https://linkedin.com/in/musharafali72b" target="_blank" class="text-gray-400 hover:text-white text-xl">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/Musharaf725" target="_blank" class="text-gray-400 hover:text-white text-xl">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.instagram.com/its__musharaf_/" target="_blank" class="text-gray-400 hover:text-white text-xl">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+        <p class="text-gray-400">&copy; 2024 [Musharaf Ali]. All rights reserved.</p>
+        <p class="text-gray-400">Built with HTML, Tailwind CSS, and JavaScript</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
